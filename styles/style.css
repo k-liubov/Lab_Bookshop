@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+.additional-menu_two a, .additional-menu_one a, .navigation__menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.categories__menu, .navigation__menu {
+  display: flex;
+  list-style: none;
+}
+
+.books .books__card_description, .books .books__card_author {
+  font: normal 500 10px/14px "Montserrat";
+  text-transform: capitalize;
+  color: #5C6A79;
+  text-align: justify;
+}
+
+.footer__button_load, .books .books__button_remove, .books .books__button {
+  margin: 0 auto;
+  width: 176px;
+  height: 45px;
+  border: 1px solid #4C3DB2;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+* body {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0.1px;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+  background-color: white;
+}
+@media screen and (max-width: 1200px) {
+  .header {
+    position: static;
+    width: auto;
+    height: 100px;
+  }
+}
+
+.header__bookshop {
+  color: #1C2A39;
+  font: 700 24px/29px "Montserrat";
+}
+
+.navigation__menu a {
+  margin-left: 40px;
+  font: normal 700 10px/12px "Montserrat";
+  color: #5C6A79;
+}
+.navigation__menu a:hover, .navigation__menu a:focus, .navigation__menu a:active {
+  font-weight: 900;
+  color: #1C2A39;
+  cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+  .navigation__menu {
+    display: none;
+  }
+}
+
+.menu-icons {
+  border: none;
+  background: none;
+  margin-left: 40px;
+}
+.menu-icons:hover {
+  cursor: pointer;
+}
+
+.menu-icons__cart {
+  position: relative;
+}
+
+.menu-icons__cart_badge {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #FF353A;
+  width: 13px;
+  height: 13px;
+  z-index: 1;
+  font: normal 700 10px/12px "Montserrat";
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 1200px) {
+  .additional-menu {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.additional-menu_one {
+  width: 149px;
+  height: 204px;
+  background: #9E98DC;
+  position: absolute;
+  left: 80%;
+  top: 195px;
+}
+@media screen and (max-width: 1200px) {
+  .additional-menu_one {
+    height: 120x;
+    position: static;
+  }
+}
+.additional-menu_one a {
+  position: relative;
+  top: 100px;
+  font: 700 18px/22px "Montserrat";
+  left: 20px;
+  color: #1C2A39;
+}
+@media screen and (max-width: 1200px) {
+  .additional-menu_one a {
+    position: static;
+  }
+}
+.additional-menu_one a:hover {
+  cursor: pointer;
+}
+
+.additional-menu_two {
+  width: 137px;
+  height: 273px;
+  background: #FF8FE6;
+  position: absolute;
+  left: 90%;
+  top: 475px;
+}
+@media screen and (max-width: 1200px) {
+  .additional-menu_two {
+    height: 120px;
+    position: static;
+  }
+}
+.additional-menu_two a {
+  position: relative;
+  top: 149px;
+  font: 700 18px/22px "Montserrat";
+  left: 20px;
+  color: #1C2A39;
+}
+@media screen and (max-width: 1200px) {
+  .additional-menu_two a {
+    position: static;
+  }
+}
+.additional-menu_two a:hover {
+  cursor: pointer;
+}
+
+.slider {
+  margin: 0 auto;
+  width: 1120px;
+  height: 702px;
+}
+@media screen and (max-width: 1200px) {
+  .slider {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 500px) {
+  .slider {
+    width: auto;
+    height: 300px;
+  }
+}
+.slider .slider__images {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.slider .slider__images .image {
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 800ms ease;
+}
+.slider .slider__images .active {
+  opacity: 1;
+}
+.slider .slider__dots {
+  display: flex;
+  justify-content: center;
+}
+.slider .slider__dots .dots-item {
+  width: 12px;
+  height: 12px;
+  background: #EFEEF6;
+  border-radius: 30px;
+  margin: 17px 10px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.slider .slider__dots .dots-item:active, .slider .slider__dots .dots-item:hover {
+  background: #9E98DC;
+}
+.slider .slider__dots .active {
+  background: #9E98DC;
+}
+
+.section__books {
+  display: flex;
+}
+@media screen and (max-width: 400px) {
+  .section__books {
+    display: block;
+  }
+}
+
+.categories {
+  width: 416px;
+  height: 710px;
+  left: 0px;
+  background: #EFEEF6;
+  margin-top: 100px;
+}
+@media screen and (max-width: 1200px) {
+  .categories {
+    width: auto;
+    height: auto;
+    padding-top: 20px;
+  }
+}
+
+.categories__menu {
+  flex-direction: column;
+  padding: 0;
+  margin-left: 30%;
+  margin-top: 45px;
+}
+
+li {
+  margin-bottom: 15px;
+  color: #5C6A79;
+  font-weight: 500;
+}
+li:hover, li:active .active-link {
+  cursor: pointer;
+  color: #756AD3;
+  color: #1C2A39;
+  font-weight: 700;
+  list-style: disc;
+}
+
+.active-link {
+  color: #1C2A39;
+  font-weight: 700;
+  list-style: disc;
+}
+
+.books {
+  height: 1200px;
+  margin-top: 145px;
+  margin-left: -60px;
+  columns: 2;
+}
+@media screen and (max-width: 1200px) {
+  .books {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .books {
+    columns: 1;
+    margin-top: 20px;
+  }
+}
+.books .books__card {
+  width: 424px;
+  height: 300px;
+  display: flex;
+  margin-right: 75px;
+  margin-bottom: 85px;
+}
+@media screen and (max-width: 1200px) {
+  .books .books__card {
+    width: 424px;
+    height: 300px;
+  }
+}
+.books .books__card_img {
+  width: 212px;
+  height: 327px;
+  margin-right: 36px;
+}
+.books .books__card_img img {
+  width: 100%;
+  height: auto;
+}
+.books .books__card_block {
+  margin: auto;
+  width: 176px;
+}
+.books .books__card_author {
+  margin-bottom: 4px;
+}
+.books .books__card_title {
+  margin: 0;
+  margin-bottom: 4px;
+  font: normal 700 16px/20px "Montserrat";
+  color: #1C2A39;
+  text-align: justify;
+}
+.books .rate_background {
+  position: relative;
+  width: 60px;
+  height: 12px;
+  background: url("../src/images/StarGrey.svg") repeat-x;
+}
+.books .rate_gold {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 12px;
+  background: url("../src/images/StarGold.svg") repeat-x;
+}
+.books .books__card_description {
+  margin-bottom: 16px;
+}
+.books .books__card_price {
+  margin: 0px auto 16px;
+  font: normal 700 13px/16px "Montserrat";
+  text-transform: uppercase;
+  color: #1C2A39;
+}
+.books .books__button {
+  color: #4C3DB2;
+}
+.books .books__button_remove {
+  color: #5C6A79;
+  border-color: #5C6A79;
+}
+
+.footer__button_load {
+  margin-bottom: 74px;
+  display: block;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

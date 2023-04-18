@@ -1,0 +1,388 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+* body {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.header {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0.1px;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    background-color: white;
+
+    @media screen and (max-width: 1200px) {
+        position: static;
+        width: auto;
+        height: 100px;
+    }
+}
+.header__bookshop {
+    color: $text-color-active;
+    font: 700 24px/29px 'Montserrat';
+}
+.navigation__menu {
+    @extend %menu;
+    a {
+    margin-left: 40px;
+    @extend %links;
+    font: $font;
+    color: $text-color;
+
+    &:hover, &:focus, &:active {
+        font-weight: 900;
+        color: $text-color-active;
+        cursor: pointer;
+    }
+    }
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
+}
+.menu-icons {
+    border: none;
+    background: none;
+    margin-left: 40px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.menu-icons__cart {
+    position: relative;
+}
+.menu-icons__cart_badge {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #FF353A;;
+  width: 13px;
+  height: 13px;
+  z-index: 1;
+  font: $font;
+  color: #FFFFFF;
+}
+.additional-menu {
+    @media screen and (max-width: 1200px) {
+        display: flex;
+    }
+}
+.additional-menu_one {
+    width: 149px;
+    height: 204px;
+    background: #9E98DC;
+    position: absolute;
+    left: 80%;
+    top: 195px;
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
+    a {
+        @extend %links;
+        position: relative;
+        top: 100px;
+        font: 700 18px/22px 'Montserrat';
+        left: 20px;
+        color: $text-color-active;
+        @media screen and (max-width: 1200px) {
+            position: static;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}
+.additional-menu_one_mobile {
+    display: none;
+
+    @media screen and (max-width: 1200px) {
+        display: block;
+        background: #9E98DC;
+        width: 50%;
+        height: 40px;
+    }
+    a {
+        @extend %links;
+        position: relative;
+        font: 700 10px/15px 'Montserrat';
+        color: $text-color-active;
+        @media screen and (max-width: 1200px) {
+            position: static;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+}
+.additional-menu_two_mobile {
+    display: none;
+
+    @media screen and (max-width: 1200px) {
+        display: block;
+        background: #FF8FE6;
+        width: 50%;
+        height: 240x;
+    }
+    a {
+        @extend %links;
+        position: relative;
+        font: 700 10px/15px 'Montserrat';
+        color: $text-color-active;
+        @media screen and (max-width: 1200px) {
+            position: static;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+}
+.additional-menu_two {
+    width: 137px;
+    height: 273px;
+    background: #FF8FE6;
+    position: absolute;
+    left: 90%;
+    top: 475px;
+    @media screen and (max-width: 1200px) {
+       display: none;
+    }
+    a {
+        @extend %links;
+        position: relative;
+        top: 149px;
+        font: 700 18px/22px 'Montserrat';
+        left: 20px;
+        color: $text-color-active;
+        @media screen and (max-width: 1200px) {
+            position: static;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.slider {
+    margin: 0 auto;
+    width: 1120px;
+    height: 702px;
+
+    @media screen and (max-width: 1200px) {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    @media screen and (max-width: 500px) {
+        width: auto;
+        height: 300px;
+    }
+    .slider__images {
+        width: 100%; 
+        height: 100%;
+        position: relative;
+
+        
+        .image {
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: opacity 800ms ease;
+        }
+        .active {
+            opacity: 1
+        }
+    }
+    .slider__dots {
+        display: flex;
+        justify-content: center;
+        .dots-item {
+            width: 12px;
+            height: 12px;
+            background: #EFEEF6;
+            border-radius: 30px;
+            margin: 17px 10px;
+            cursor: pointer;
+            transition: 0.4s ease;
+
+            &:active, &:hover {
+                background: #9E98DC;
+            }
+           
+        }
+        .active {
+            background: #9E98DC;
+        }
+    }
+    
+}
+
+.section__books {
+    display: flex;
+    @media screen and (max-width: 1200px) {
+        margin: 10px 10px;
+        }
+    @media screen and (max-width: 400px) {
+        display: block;
+        }
+}
+.categories {
+    width: 416px;
+    height: 710px;
+    left: 0px;
+    background: #EFEEF6;
+    margin-top: 100px;
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        }
+}
+
+.categories__menu {
+    @extend %menu;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 30%;
+    margin-top: 45px;
+
+    @media screen and (max-width: 1200px) {
+        display: block;
+        margin: 10px 10px;
+        width: 100%;
+    }
+
+}
+li {
+    margin-bottom: 15px;
+    color: $text-color;
+    font-weight: 500;
+    
+    &:hover, &:active .active-link {
+        cursor: pointer;
+        color: #756AD3;
+        color: $text-color-active;
+        font-weight: 700;
+        list-style: disc;
+    }
+    
+}
+.active-link {
+    color: $text-color-active;
+    font-weight: 700;
+    list-style: disc;
+}
+
+.books {
+    margin-top: 145px;
+    margin-left: -60px;
+    columns: 2;
+    width: auto;
+    height: auto;
+
+    @media screen and (max-width: 1200px) {
+        
+        margin: 0 auto;
+        }
+
+    @media screen and (max-width: 400px) {
+        columns: 1;;
+        margin-top: 20px;
+        }
+
+    .books__card {
+        width: 424px;
+        height: 300px;
+        display: flex;
+        margin-right: 75px;
+        margin-bottom: 85px;
+        @media screen and (max-width: 1200px) {
+            width: 424px;
+            height: 300px;;
+        }
+      }
+      .books__card_img {
+        width: 212px;
+        height: 327px;
+        margin-right: 36px;
+
+         img {
+            width: 100%;
+            height: auto;
+      }
+    }
+      
+      .books__card_block {
+        margin: auto;
+        width: 176px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+      }
+
+      .books__card_author {
+        @extend %books;
+        margin-bottom: 4px;
+      }
+      .books__card_title {
+        margin: 0;
+        margin-bottom: 4px;
+        font: normal 700 16px/20px 'Montserrat';
+        color: $text-color-active;
+        text-align: $text-align;
+      }
+      .rate_background {
+          position: relative;
+          width: 60px;
+          height: 12px; 
+          background:url("../src/images/StarGrey.svg") repeat-x;
+      }
+       
+      .rate_gold {
+          position: absolute;
+          top: 0px;
+          left: 0px; 
+          height: 12px; 
+          background:url("../src/images/StarGold.svg") repeat-x;
+      }
+      
+      .books__card_description {
+        @extend %books;
+        margin-bottom: 16px;
+      }
+      .books__card_price {
+        margin: 0px 0px 16px;
+        font: normal 700 13px/16px 'Montserrat';
+        text-transform: uppercase;
+        color: $text-color-active;
+      }
+      .books__button {
+        @extend %button;
+        color: #4C3DB2;
+      }
+      .books__button_remove {
+        @extend %button;
+        color: #5C6A79;
+        border-color: #5C6A79;
+      }
+      
+
+}
+.footer__button_load {
+    @extend %button;
+    margin-bottom: 74px;
+    display: block;
+    align-items: center;
+  }

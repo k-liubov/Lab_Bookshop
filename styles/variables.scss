@@ -1,0 +1,27 @@
+$text-color: #5C6A79;
+$text-color-active:#1C2A39;
+$font: normal 700 10px/12px 'Montserrat';
+$text-align: justify;
+
+%links {
+    text-decoration: none;
+    text-transform: uppercase;
+};
+%menu {
+    display: flex;
+    list-style: none;
+}
+%books {
+    font: normal 500 10px/14px 'Montserrat';
+    text-transform: capitalize;
+    color: $text-color;
+    text-align: $text-align;
+}
+%button {
+    margin: 0 auto;
+    width: 176px;
+    height: 45px;
+    border: 1px solid #4C3DB2;
+    cursor: pointer;
+    text-transform: uppercase;
+}
